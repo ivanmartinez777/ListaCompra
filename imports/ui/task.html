@@ -1,0 +1,19 @@
+<template name="producto">
+  <li class="{{#if checked}}checked{{/if}}">
+    <button class="delete">&times;</button>
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+    <span class="text">{{text}}
+   {{quantity}}   {{place}}</span> - <span id="nombre">{{username}}</span></li>
+ 
+
+</template>
+
+<template name="comprado">
+  <li class="comprado">
+    <button class="delete">&times;</button>
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+    <span class="text">{{text}}
+   {{quantity}}   {{place}}</span> - <span id="nombre">{{username}}</span></li>
+ 
+
+</template>

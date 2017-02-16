@@ -1,0 +1,73 @@
+<body>
+
+  <div class="container">
+
+    <header>
+
+      <h1>Lista de la compra ({{incompleteCount}})</h1>
+
+            <label class="hide-completed">
+
+        <input type="checkbox" />
+
+        
+
+        Hide Completed Tasks
+
+      </label>
+
+ 
+
+      {{> loginButtons}}
+
+      <h2>Fruteria ({{incompleteCountFruteria}})</h2>
+      <h2>Congelados ({{incompleteCountCongelados}})</h2>
+      <h2>Supermercado ({{incompleteCountSuper}})</h2><br>
+      {{#if currentUser}}
+      <form class="new-product">
+
+        <input type="text" name="text" placeholder="Nuevo producto" />
+         <input type="number" name="quantity"><br>
+         <input type="radio" name="place" value="Fruteria" checked> Fruta<br>
+          <input type="radio" name="place" value="Congelados">Congelados<br>
+          <input type="radio" name="place" value="Super">Super<br>
+          <input type="submit" value="aceptar">
+      </form>
+       {{/if}}
+    </header>
+
+ 
+
+    <ul>
+      {{#each tasks}}
+
+        {{> producto}}
+
+      {{/each}}
+
+    </ul>
+
+    <footer>
+
+      <h2> Productos Comprados </h2>
+      <ul>
+      {{#each comprados}}
+
+        {{> comprado}}
+
+      {{/each}}
+
+    </ul>
+
+    </footer>
+
+  </div>
+
+</body>
+
+ 
+
+
+
+
+
